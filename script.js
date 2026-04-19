@@ -12,10 +12,10 @@ const projects = [
     image: "https://github.com/WeavyC/portfolio/blob/main/noFilter%20(8).png?raw=true" 
   },
   {
-    title: "Counter Blox: Reimagined Modded",
-    description: "🗺 Take part in a team vs team based combat with maps spanning across the world!",
-    url: "https://www.youtube.com/watch?v=BKBBsn9RI7M",
-    image: "https://github.com/WeavyC/portfolio/blob/main/noFilter%20(9).png?raw=true" 
+    title: "Stryke",
+    description: "🗺 Welcome to Stryke, a game where everyone has a one-tap deagle",
+    url: "https://www.roblox.com/games/135848237744289/Stryke",
+    image: "https://tr.rbxcdn.com/180DAY-05e66aa9e2cd6397d6f6dece86538371/768/432/Image/Webp/noFilter" 
   }
 ];
 
