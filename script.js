@@ -1,15 +1,17 @@
 const projects = [
   {
-    title: "+1 Speed Hoverboard Escape",
-    description: "Welcome to +1 Speed Hoverboard Escape! 🛹",
-    url: "https://www.roblox.com/games/96429933667357/1-Speed-Hoverboard-Escape",
-    image: "https://github.com/WeavyC/portfolio/blob/main/noFilter%20(7).png?raw=true"
+    title: "Defuse Division",
+    description: "Defuse Division is a team-based objective mode where one side must plant a bomb at a designated site while the other must prevent it or defuse it if planted. The attacking team wins by successfully detonating the bomb or eliminating all opponents, while the defending team wins by stopping the plant, defusing the bomb, or eliminating the attackers before they can complete their objective.
+",
+    url: "https://www.roblox.com/games/112757576021097/Defuse-Division",
+    image: "https://tr.rbxcdn.com/180DAY-4ebbefede6541c78fb3b33701a17680d/768/432/Image/Webp/noFilter"
   },
   {
-    title: "City Of Vice",
-    description: "🔥 CITY OF VICE – Build your rise from nothing and take over the streets.",
-    url: "https://www.roblox.com/games/119963002291522/City-of-Vice",
-    image: "https://github.com/WeavyC/portfolio/blob/main/noFilter%20(8).png?raw=true" 
+    title: "Hover for Brainrots",
+    description: "Welcome to Hover for Brainrots! 🛹
+",
+    url: "https://www.roblox.com/games/130042225561510/Hover-For-Brainrots",
+    image: "https://tr.rbxcdn.com/180DAY-367e9ac91cba7bba915c7fe8211fe358/768/432/Image/Webp/noFilter" 
   },
   {
     title: "Stryke",
@@ -22,19 +24,20 @@ const projects = [
 
 const groups = [
   {
-    name: "Spectre Core",
-    role: "Owner",
-    description: "Fun Games!",
-    url: "https://www.roblox.com/communities/642962631/Spectre-Core#!/about",
+    name: "Fourteam",
+    role: "Developer",
+    description: "Developers behind the Defuse Division project.",
+    url: "https://www.roblox.com/communities/5628426/Fourtea#!/about",
   // image: "https://placehold.co/400x400/222/FFF?text=WS"
-    image: "https://tr.rbxcdn.com/180DAY-a6f763576b800f0877fef35e07387265/150/150/Image/Webp/noFilter"
+    image: "https://tr.rbxcdn.com/180DAY-ffe8a915f012e24df83f8732dd76f304/150/150/Image/Webp/noFilter"
   },
   {
-    name: "Devolve Community",
-    role: "Owner",
-    description: "FPS Games. Mostly known for Counter Blox: Reimagined & Modded",
-    url : "https://www.roblox.com/communities/702299356/Devolve-Games#!/about",
-    image: "https://tr.rbxcdn.com/180DAY-1839f51e2f9ad3156966f3b5e5ed8a21/150/150/Image/Webp/noFilter"
+    name: "Enyx Studios",
+    role: "Co-Owner",
+    description: "Enyx Studios — A futuristic game studio focused on immersive worlds, sharp design, and high-quality gameplay experiences.
+",
+    url : "https://www.roblox.com/communities/1008568252/Enyx-Studios#!/about",
+    image: "https://tr.rbxcdn.com/180DAY-8e13f5e3a6f3bceea452dbb3f13950d6/1440/456/Image/Png/noFilter"
   },
   {
     name: "City Of Vice",
