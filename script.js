@@ -1,15 +1,13 @@
 const projects = [
   {
     title: "Defuse Division",
-    description: "Defuse Division is a team-based objective mode where one side must plant a bomb at a designated site while the other must prevent it or defuse it if planted. The attacking team wins by successfully detonating the bomb or eliminating all opponents, while the defending team wins by stopping the plant, defusing the bomb, or eliminating the attackers before they can complete their objective.
-",
+    description: "Defuse Division is a team-based objective mode where one side must plant a bomb at a designated site while the other must prevent it or defuse it if planted. The attacking team wins by successfully detonating the bomb or eliminating all opponents, while the defending team wins by stopping the plant, defusing the bomb, or eliminating the attackers before they can complete their objective.",
     url: "https://www.roblox.com/games/112757576021097/Defuse-Division",
     image: "https://tr.rbxcdn.com/180DAY-4ebbefede6541c78fb3b33701a17680d/768/432/Image/Webp/noFilter"
   },
   {
     title: "Hover for Brainrots",
-    description: "Welcome to Hover for Brainrots! 🛹
-",
+    description: "Welcome to Hover for Brainrots! 🛹",
     url: "https://www.roblox.com/games/130042225561510/Hover-For-Brainrots",
     image: "https://tr.rbxcdn.com/180DAY-367e9ac91cba7bba915c7fe8211fe358/768/432/Image/Webp/noFilter" 
   },
@@ -34,8 +32,7 @@ const groups = [
   {
     name: "Enyx Studios",
     role: "Co-Owner",
-    description: "Enyx Studios — A futuristic game studio focused on immersive worlds, sharp design, and high-quality gameplay experiences.
-",
+    description: "Enyx Studios — A futuristic game studio focused on immersive worlds, sharp design, and high-quality gameplay experiences.",
     url : "https://www.roblox.com/communities/1008568252/Enyx-Studios#!/about",
     image: "https://tr.rbxcdn.com/180DAY-8e13f5e3a6f3bceea452dbb3f13950d6/1440/456/Image/Png/noFilter"
   },
