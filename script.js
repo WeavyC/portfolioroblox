@@ -7,15 +7,15 @@ const projects = [
   },
   {
     title: "Hover for Brainrots",
-    description: "Welcome to Hover for Brainrots! 🛹",
+    description: "🛹 Hoverboard racing game where you glide around the map collecting brainrots before anyone else does.",
     url: "https://www.roblox.com/games/130042225561510/Hover-For-Brainrots",
     image: "https://tr.rbxcdn.com/180DAY-367e9ac91cba7bba915c7fe8211fe358/768/432/Image/Webp/noFilter" 
   },
   {
-    title: "Stryke",
-    description: "🗺 Welcome to Stryke, a game where everyone has a one-tap deagle",
-    url: "https://www.roblox.com/games/135848237744289/Stryke",
-    image: "https://tr.rbxcdn.com/180DAY-05e66aa9e2cd6397d6f6dece86538371/768/432/Image/Webp/noFilter" 
+    title: "Paint Albums!",
+    description: "Chill game where you can draw over your favourite albums!",
+    url: "https://www.roblox.com/games/127392769658273/Paint-Albums",
+    image: "https://tr.rbxcdn.com/180DAY-0caa3457de129993eb78eca301c358f8/768/432/Image/Webp/noFilter" 
   }
 ];
 
@@ -23,7 +23,7 @@ const projects = [
 const groups = [
   {
     name: "Fourteam",
-    role: "Developer",
+    role: "Ex-Developer",
     description: "Developers behind the Defuse Division project.",
     url: "https://www.roblox.com/communities/5628426/Fourtea#!/about",
   // image: "https://placehold.co/400x400/222/FFF?text=WS"
@@ -37,14 +37,19 @@ const groups = [
     image: "https://tr.rbxcdn.com/180DAY-8e13f5e3a6f3bceea452dbb3f13950d6/1440/456/Image/Png/noFilter"
   },
   {
-    name: "City Of Vice",
-    role: "Scripter",
-    description: "Known for City Of Vice.",
-    url: "https://www.roblox.com/communities/918674343/CityOfVice#!/about",
-    image: "https://tr.rbxcdn.com/180DAY-c3d2db22b92c137e52cf294174589ec1/150/150/Image/Webp/noFilter"
+    name: "VSoft",
+    role: "Owner",
+    description: "Known for Paint Albums.",
+    url: "https://www.roblox.com/communities/32843109/VS-ft",
+    image: "https://tr.rbxcdn.com/180DAY-4e5c7692c778f96a1938cc4fe617a0a1/150/150/Image/Webp/noFilter"
   }
 ];
 
+
+const menuBtn = document.getElementById("menu-btn");
+const mobileNav = document.getElementById("mobile-nav");
+menuBtn.addEventListener("click", () => mobileNav.classList.toggle("hidden"));
+mobileNav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => mobileNav.classList.add("hidden")));
 
 const projectList = document.getElementById("project-list");
 
