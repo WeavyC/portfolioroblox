@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weavy | Roblox Developer</title>
-  
+  <title>Weavy | Roblox Scripter & Developer</title>
+  <meta name="description" content="Roblox scripter and developer. Games, systems, and groups I've worked on." />
+
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet">
+
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -18,87 +22,395 @@
         extend: {
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
           },
           colors: {
             dark: {
-              900: '#050505',
-              800: '#111111',
-              700: '#1a1a1a',
+              950: '#08080a',
+              900: '#0f0f13',
+              850: '#15151c',
+              800: '#1b1b24',
+              700: '#262633',
             }
           }
         }
       }
     }
   </script>
-  
-  <style type="text/tailwindcss">
-    @layer utilities {
-      .text-gradient {
-        @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500;
-      }
-    }
-  </style>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
-<body class="bg-dark-900 text-white font-sans antialiased selection:bg-white selection:text-black">
+
+<body
+  class="bg-dark-950 text-zinc-100 font-sans antialiased selection:bg-emerald-500 selection:text-black relative min-h-screen overflow-x-hidden bg-grid-pattern">
+
+  <!-- Ambient Glow Elements -->
+  <div class="glow-bg w-[500px] h-[500px] bg-emerald-500/10 top-[-100px] left-[-150px] fixed"></div>
+  <div class="glow-bg w-[600px] h-[600px] bg-blue-600/10 top-[40%] right-[-200px] fixed"></div>
 
   <!-- Header -->
-  <header class="fixed top-0 w-full z-50 bg-dark-900/80 backdrop-blur-md border-b border-white/10">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-      <h1 class="text-xl font-extrabold tracking-tight">Weavy's Portfolio</h1>
-      <nav class="hidden md:flex gap-8">
-        <a href="#about" class="text-sm font-semibold text-gray-400 hover:text-white transition-colors">About</a>
-        <a href="#projects" class="text-sm font-semibold text-gray-400 hover:text-white transition-colors">Projects</a>
-        <a href="#groups" class="text-sm font-semibold text-gray-400 hover:text-white transition-colors">Groups</a>
-        <a href="#contact" class="text-sm font-semibold text-gray-400 hover:text-white transition-colors">Contact</a>
+  <header class="fixed top-0 w-full z-50 bg-dark-950/85 backdrop-blur-xl border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex justify-between items-center">
+      <a href="#" class="flex items-center gap-2 font-extrabold text-xl tracking-tight">
+        <span>Weavy</span>
+        <span
+          class="text-xs font-mono px-2 py-0.5 rounded bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">roblox
+          dev</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+        <a href="#about" class="text-zinc-400 hover:text-white transition-colors">About</a>
+        <a href="#projects" class="text-zinc-400 hover:text-white transition-colors">Games</a>
+        <a href="#skills" class="text-zinc-400 hover:text-white transition-colors">What I Do</a>
+        <a href="#groups" class="text-zinc-400 hover:text-white transition-colors">Groups</a>
+        <a href="#contact" class="text-zinc-400 hover:text-white transition-colors">Contact</a>
       </nav>
-      <!-- Mobile Menu Button Placeholder (Optional) -->
+
+      <div class="flex items-center gap-3">
+        <!-- Status Pill -->
+        <div
+          class="hidden sm:inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          <span>Open for commissions</span>
+        </div>
+
+        <!-- Discord Copy Button in Nav -->
+        <button type="button"
+          class="copy-discord-btn inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-white/5 hover:bg-white/10 text-zinc-200 border border-white/10 transition-colors">
+          <svg class="w-3.5 h-3.5 text-indigo-400" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.893.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+          </svg>
+          <span>ll1ff</span>
+        </button>
+      </div>
     </div>
   </header>
 
-  <main class="max-w-7xl mx-auto px-6 pt-32 pb-20">
-    
-    <!-- About Section -->
-    <section id="about" class="mb-24">
-      <h2 class="text-4xl md:text-5xl font-extrabold mb-8 text-gradient">About Me</h2>
-      <p class="text-xl text-gray-400 max-w-2xl leading-relaxed">
-        I'm a Roblox developer focused on scripting systems, UI, and gameplay logic with optimized Luau practices.
+  <main class="max-w-7xl mx-auto px-6 pt-36 pb-24 space-y-28">
+
+    <!-- Hero / About Section -->
+    <section id="about" class="relative">
+      <div
+        class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium bg-zinc-900 border border-white/10 text-zinc-300 mb-6">
+        <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+        <span>Roblox Scripter</span>
+      </div>
+
+      <h1 class="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-[1.1] mb-6 text-white">
+        Hey. <br />
+        <span class="text-emerald-400">I program Roblox games.</span>
+      </h1>
+
+      <p class="text-lg sm:text-xl text-zinc-400 max-w-2xl leading-relaxed mb-8">
+        I script gameplay, movement, and backends in Luau with a strong focus on Source-styled gun feel. Outside Roblox,
+        I work with JavaScript, Go, LLMs/VLMs, and Linux hosting.
       </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-wrap items-center gap-4 mb-14">
+        <a href="#projects"
+          class="inline-flex items-center gap-2 px-6 py-3 rounded-xl bg-white text-zinc-950 font-bold text-sm hover:bg-zinc-200 transition-all shadow-lg hover:shadow-white/10">
+          <span>View Games</span>
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+          </svg>
+        </a>
+
+        <button type="button"
+          class="copy-discord-btn inline-flex items-center gap-2.5 px-6 py-3 rounded-xl glass-panel text-white font-semibold text-sm hover:bg-white/10 transition-all">
+          <svg class="w-4 h-4 text-indigo-400" viewBox="0 0 24 24" fill="currentColor">
+            <path
+              d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.893.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+          </svg>
+          <span>Copy Discord (ll1ff)</span>
+        </button>
+
+        <a href="#contact"
+          class="inline-flex items-center gap-1.5 text-sm font-semibold text-zinc-400 hover:text-white transition-colors px-3 py-2">
+          <span>Contact info</span>
+          <span>&rarr;</span>
+        </a>
+      </div>
+
+      <!-- Quick Metrics Strip -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 p-5 rounded-2xl glass-panel">
+        <div>
+          <div id="hero-total-visits" class="text-2xl sm:text-3xl font-extrabold text-emerald-400">44M+</div>
+          <div class="text-xs text-zinc-400 mt-0.5">Total Game Plays</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-white">5</div>
+          <div class="text-xs text-zinc-400 mt-0.5">Games Worked On</div>
+        </div>
+        <div>
+          <div id="hero-total-members" class="text-2xl sm:text-3xl font-extrabold text-white">350K+</div>
+          <div class="text-xs text-zinc-400 mt-0.5">Total Group Members</div>
+        </div>
+        <div>
+          <div class="text-2xl sm:text-3xl font-extrabold text-white">Luau · Go · JS</div>
+          <div class="text-xs text-zinc-400 mt-0.5">Scripting & Backend</div>
+        </div>
+      </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="mb-24">
-      <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-gradient">My Projects</h2>
-      <div id="project-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Projects will be injected here via JS -->
+    <section id="projects" class="space-y-8">
+      <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+        <div>
+          <div class="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-400 mb-2">Projects</div>
+          <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">Games I've Worked On</h2>
+          <p class="text-zinc-400 text-sm sm:text-base mt-2 max-w-xl">
+            My owned games, games I actively code for, and development work for other studios. Sorted by player count.
+          </p>
+        </div>
+
+        <!-- Controls: Filters + Sort -->
+        <div class="flex flex-wrap items-center gap-3">
+          <!-- Filter Tab Buttons -->
+          <div class="inline-flex p-1.5 rounded-xl bg-dark-900 border border-white/10 flex-wrap gap-1">
+            <button type="button" data-filter="all"
+              class="px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all bg-white text-zinc-950 shadow-sm">
+              All (<span id="count-all">5</span>)
+            </button>
+            <button type="button" data-filter="owned"
+              class="px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all text-zinc-400 hover:text-white">
+              Owned & Lead (<span id="count-owned">3</span>)
+            </button>
+            <button type="button" data-filter="contributed"
+              class="px-3.5 py-1.5 rounded-lg text-xs sm:text-sm font-semibold transition-all text-zinc-400 hover:text-white">
+              Contributions (<span id="count-contributed">2</span>)
+            </button>
+          </div>
+
+          <!-- Sort Dropdown -->
+          <div
+            class="flex items-center gap-2 bg-dark-900 border border-white/10 px-3 py-2 rounded-xl text-xs text-zinc-300">
+            <svg class="w-3.5 h-3.5 text-emerald-400 flex-shrink-0" fill="none" stroke="currentColor"
+              viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12"></path>
+            </svg>
+            <span class="text-zinc-500 font-medium">Sort:</span>
+            <select id="sort-select" aria-label="Sort projects"
+              class="bg-transparent text-white font-semibold text-xs focus:outline-none cursor-pointer">
+              <option value="players" class="bg-zinc-900 text-white">Highest Players</option>
+              <option value="visits" class="bg-zinc-900 text-white">Most Total Visits</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Cards Grid -->
+      <div id="project-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+        <!-- Injected via script.js -->
+      </div>
+    </section>
+
+    <!-- What I Do Section -->
+    <section id="skills" class="space-y-8">
+      <div>
+        <div class="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-400 mb-2">Development</div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">What I Work On</h2>
+        <p class="text-zinc-400 text-sm sm:text-base mt-2 max-w-xl">
+          Areas I focus on when programming games in Luau.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div class="glass-panel p-6 rounded-2xl space-y-4">
+          <div
+            class="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-white">Guns & Weapon Feel</h3>
+          <p class="text-sm text-zinc-400 leading-relaxed">
+            I mainly build gun systems with lots of experience making Source-styled weapon movement. Procedural recoil,
+            spring inertia, viewmodel sway, ADS, raycast shooting, and hitboxes.
+          </p>
+          <div class="pt-2 flex flex-wrap gap-1.5">
+            <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-mono">Source Sway</span>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-mono">Viewmodels</span>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-mono">Raycasting</span>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-mono">Recoil Math</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="glass-panel p-6 rounded-2xl space-y-4">
+          <div
+            class="w-10 h-10 rounded-xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-white">Movement & Backend</h3>
+          <p class="text-sm text-zinc-400 leading-relaxed">
+            I work on movement controllers a lot (hoverboards, momentum, smooth physics) as well as game backends:
+            player data saving, round lifecycles, and server logic.
+          </p>
+          <div class="pt-2 flex flex-wrap gap-1.5">
+            <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-mono">Hoverboards</span>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-mono">Physics</span>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-mono">DataStores</span>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-mono">Round Loops</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="glass-panel p-6 rounded-2xl space-y-4">
+          <div
+            class="w-10 h-10 rounded-xl bg-purple-500/10 border border-purple-500/20 flex items-center justify-center text-purple-400">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01">
+              </path>
+            </svg>
+          </div>
+          <h3 class="text-lg font-bold text-white">JS, Go, AI & Infra</h3>
+          <p class="text-sm text-zinc-400 leading-relaxed">
+            I also write JavaScript and Go, work with LLMs and VLMs, and handle Linux VPS hosting, Cloudflare
+            configuration, and server setups.
+          </p>
+          <div class="pt-2 flex flex-wrap gap-1.5">
+            <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-mono">Go</span>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-mono">JavaScript</span>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-mono">LLMs / VLMs</span>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-mono">Linux & VPS</span>
+            <span class="text-[11px] px-2 py-0.5 rounded bg-zinc-800 text-zinc-300 font-mono">Cloudflare</span>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- Groups Section -->
-    <section id="groups" class="mb-24">
-      <h2 class="text-4xl md:text-5xl font-extrabold mb-12 text-gradient">Groups</h2>
-      <div id="group-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+    <section id="groups" class="space-y-8">
+      <div>
+        <div class="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-400 mb-2">Groups</div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">Studios & Groups</h2>
+        <p class="text-zinc-400 text-sm sm:text-base mt-2 max-w-xl">
+          Groups I own, co-own, or code for on Roblox. Ranked by members.
+        </p>
+      </div>
+
+      <div id="group-list" class="grid grid-cols-1 md:grid-cols-2 gap-6">
         <!-- Groups will be injected here via JS -->
       </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="mb-12">
-      <h2 class="text-4xl md:text-5xl font-extrabold mb-8 text-gradient">Contact</h2>
-      <div class="bg-dark-800 border border-white/10 rounded-2xl p-8 max-w-xl">
-        <p class="text-lg text-gray-300 space-y-2">
-          <span class="block">Discord: <strong class="text-white">@9b9m</strong></span>
-          <span class="block">Email: <strong class="text-white">kenntbester@gmail.com</strong></span>
-          <span class="block">Roblox: <strong class="text-white">aqc5x</strong></span>
+    <section id="contact" class="space-y-8">
+      <div>
+        <div class="text-xs font-mono font-semibold uppercase tracking-wider text-emerald-400 mb-2">Contact</div>
+        <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">Get In Touch</h2>
+        <p class="text-zinc-400 text-sm sm:text-base mt-2 max-w-xl">
+          Feel free to reach out for commissions, hiring, or questions.
         </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Discord Card (Interactive Copy) -->
+        <div class="glass-panel p-6 rounded-2xl border border-white/10 hover:border-indigo-500/40 transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <div
+              class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/20 flex items-center justify-center text-indigo-400">
+              <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994.021-.041.001-.09-.041-.106a13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.893.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z" />
+              </svg>
+            </div>
+            <span
+              class="text-[11px] font-mono text-indigo-400 bg-indigo-500/10 px-2 py-0.5 rounded border border-indigo-500/20">Chat</span>
+          </div>
+          <h3 class="text-base font-bold text-white mb-1">Discord</h3>
+          <p class="text-sm font-mono text-zinc-400 mb-4">ll1ff</p>
+          <button type="button"
+            class="copy-discord-btn w-full py-2.5 px-4 rounded-xl bg-indigo-600/20 hover:bg-indigo-600/30 text-indigo-200 border border-indigo-500/30 font-semibold text-xs transition-colors flex items-center justify-center gap-2">
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z">
+              </path>
+            </svg>
+            <span>Copy Username</span>
+          </button>
+        </div>
+
+        <!-- Roblox Profile Card -->
+        <div class="glass-panel p-6 rounded-2xl border border-white/10 hover:border-emerald-500/40 transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <div
+              class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 font-extrabold text-lg">
+              R
+            </div>
+            <span
+              class="text-[11px] font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded border border-emerald-500/20">Profile</span>
+          </div>
+          <h3 class="text-base font-bold text-white mb-1">Roblox</h3>
+          <p class="text-sm font-mono text-zinc-400 mb-4">aqc5x</p>
+          <a href="https://www.roblox.com/users/10789236/profile" target="_blank" rel="noopener noreferrer"
+            class="w-full py-2.5 px-4 rounded-xl bg-emerald-500/20 hover:bg-emerald-500/30 text-emerald-200 border border-emerald-500/30 font-semibold text-xs transition-colors flex items-center justify-center gap-2">
+            <span>Open Profile</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+            </svg>
+          </a>
+        </div>
+
+        <!-- Email Card -->
+        <div class="glass-panel p-6 rounded-2xl border border-white/10 hover:border-zinc-400/40 transition-all">
+          <div class="flex items-center justify-between mb-4">
+            <div
+              class="w-12 h-12 rounded-xl bg-zinc-800 border border-white/10 flex items-center justify-center text-zinc-300">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                </path>
+              </svg>
+            </div>
+            <span
+              class="text-[11px] font-mono text-zinc-400 bg-white/5 px-2 py-0.5 rounded border border-white/10">Email</span>
+          </div>
+          <h3 class="text-base font-bold text-white mb-1">Email</h3>
+          <p class="text-sm font-mono text-zinc-400 mb-4 truncate">kenntbester@gmail.com</p>
+          <a href="mailto:kenntbester@gmail.com"
+            class="w-full py-2.5 px-4 rounded-xl bg-white/10 hover:bg-white/15 text-white border border-white/15 font-semibold text-xs transition-colors flex items-center justify-center gap-2">
+            <span>Send Email</span>
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <footer class="border-t border-white/10 py-8 text-center text-gray-500 text-sm bg-dark-900">
-    &copy; 2026 Weavy – Roblox Game Developer
+  <!-- Footer -->
+  <footer class="border-t border-white/10 py-10 bg-dark-950/80 backdrop-blur-md text-zinc-500 text-xs text-center">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div class="flex items-center gap-2">
+        <span class="font-bold text-zinc-300">Weavy</span>
+        <span>•</span>
+        <span>Roblox Scripter & Developer</span>
+      </div>
+      <div>
+        &copy; 2026 Weavy
+      </div>
+    </div>
   </footer>
 
   <script src="script.js"></script>
 </body>
+
 </html>
