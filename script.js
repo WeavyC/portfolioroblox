@@ -28,7 +28,7 @@ const projects = [
     categoryLabel: "Lead Scripter",
     role: "Lead Scripter",
     status: "Live",
-    playerCount: 277,
+    playerCount: 275,
     visits: 2211938,
     description: "Arcade hoverboard runner where players collect items across the map and upgrade speed and jump.",
     url: "https://www.roblox.com/games/130042225561510/Hover-For-Brainrots",
